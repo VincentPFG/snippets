@@ -1,0 +1,5 @@
+{
+	"Nouveau": {"prefix": "n", "body": "\"$1\": {\"prefix\": \"$2\", \"body\": \"$3\"},$0"},
+	"Simple Choice": {"prefix": "c", "body": "\"$1\": {\"prefix\": \"$2\", \"body\": \"\\${1|$3|}\"},$0"},
+	"New JSON entry": {"prefix": "j", "body": "\"$1\": \"$2\""},
+}

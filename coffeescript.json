@@ -1,0 +1,48 @@
+{
+	"Function": {"prefix": "f", "body": "->\n\t"},
+	"Function w/ Parameters": {"prefix": "fp","body": "($1) ->\n\t"},
+	"Arrow Function": {"prefix": "af", "body": "=>\n\t"},
+	"Arrow Function w/ Parameters": {"prefix": "afp","body": "($1) =>\n\t"},
+	// "Lambda Function": {"prefix": "l", "body": "($1) => "},
+
+	"import": {"prefix": "i", "body": "import $1 from '$1'"},
+	"import from": {"prefix": "if", "body": "import $1 from '$2'"},
+	"import component": {"prefix": "ic", "body": "import $1 from '~/components/$1'"},
+	"export default": {"prefix": "ed", "body": "export default\n\t"},
+	"export": {"prefix": "e", "body": "export "},
+	"vuex": {"prefix": "x", "body": "import x from 'vuex'"},
+
+	"class": {"prefix": "c", "body": "class $1\n\tconstructor: ($2) ->"},
+
+	// "Vue API": {"prefix": "v", "body": "${1|data,props,propsData,computed,methods,watch,components,layout,model,mounted|}:"},
+	"Vue API": {"prefix": "v", "body": "${1|data: ->\n\t,methods:\n\t,components: ,mounted: ->\n\t,props: ,computed:\n\t,watch:\n\t|}"},
+	"Store API": {"prefix": "s", "body": "${1||}"},
+
+	// "require": {"prefix": "r", "body": "$1 = require"},
+	"require": {"prefix": "r", "body": "require"},
+	"simple require": {"prefix": "re", "body": "$1 = require '$1'"},
+	"exports": {"prefix": "me", "body": "module.exports ="},
+
+	"localStorage": {"prefix": "ls", "body": "localStorage"},
+
+	"Vues Maps": {"prefix": "xm", "body": "...x.map${1|State,Getters,Mutations,Actions|}"},
+
+	"Console Log": {"prefix": "log", "body": "console.log "},
+
+	// express
+	"Express Function": {"prefix": "ef", "body": "(r, s) ->\n\t"},
+	"Express Middleware": {"prefix": "em", "body": "(r, s, n) ->\n\t$0\nn()"},
+
+	// netlify
+	"Netlify Function": {"prefix": "nf", "body": "exports.handler = (event, context, callback) ->\n\tcallback null,\n\t\tstatusCode: 200\n\t\tbody: 'Hello, World'"},
+
+	// graphql
+	"GraphQL Query Block String": {"prefix": "gql", "body": "gql \"\"\"\n\t$0\n\"\"\""},
+
+	// gridsome local plugin
+	"gridsome.server.js": {"prefix": "gsj", "body": "module.exports = require('./gridsome.server.coffee')"},
+	"gridsome.client.js": {"prefix": "gcj", "body": "module.exports = require('./gridsome.client.coffee')"},
+	"gridsome.server.coffee": {"prefix": "gsc", "body": "module.exports = (api, options) ->\n\n\t"},
+	"gridsome.server.client": {"prefix": "gsc", "body": "export default (Vue, options, {}) ->\n\n\t"},
+
+}

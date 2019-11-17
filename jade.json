@@ -1,0 +1,63 @@
+{
+	// Place your snippets for jade here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Breakpoints": {"prefix": "bp", "body": "${1|xs,sm,md,lg,xl|}"},
+	"Vuetify Colors": {"prefix": ".c", "body": ".${1|primary,accent,secondary,info,warning,error,success|}"},
+
+	"Alert": {"prefix": "a", "body": "v-alert(type='${1|success,info,warning,alert|}')"},
+	"Avatar": {"prefix": "a", "body": "v-avatar\n\timg(src='$1')$0"},
+	"Badge": {"prefix": "b", "body": "v-badge\n\ttemplate(v-slot:badge)\n\t\tspan\n\tv-icon "},
+	"Bottom Nav": {"prefix": "bn", "body": "v-bottom-nav(app value='true' shift)\n\tv-btn\n\t\tspan\n\t\tv-icon"},
+	"Breadcrumb": {"prefix": "bc", "body": "v-breadcrumbs(:items='$1')\n\ttemplate(v-slot:divider)\n\t\tv-icon arrow_right$0"},
+	"Button": {"prefix": "b", "body": "v-btn"},
+	"Card": {"prefix": "c", "body": "${1|v-card,v-card-actions,v-card-media (depreciated),v-card-text,v-card-title|}"},
+	"Carousel": {"prefix": "c", "body": "${1|v-carousel,v-carousel-item|}"},
+	"Chip": {"prefix": "c", "body": "v-chip(v-model='$1' ${2:close}) $0"},
+	"Dialog": {"prefix": "d", "body": "v-dialog(v-model='dialog' width=300)\n\ttemplate(v-slot:activator='{on}')\n\t\tv-btn(v-on='on') $1\n\tv-card\n\t\tv-card-title.primary.headline(primary-title) $2\n\t\tv-card-text "},
+	"Data Table": {"prefix": "dt", "body": "v-data-table(:headers='${1:headers}' :items='$2')\n\ttemplate(v-slot:items='${3:items}')\n\t\ttd"},
+	"Expansion Panel": {"prefix": "ep", "body": "${1|v-expansion-panel,v-expansion-panel-content,template(v-slot:header)\n\t|}"},
+	"Footer": {"prefix": "f", "body": "v-footer(app absolute).primary\n\tv-layout\n\t\tv-flex(text-xs-center) "},
+	"Group: Button Group": {"prefix": "bg", "body": "v-btn-toggle(v-model='$1' ${2:multiple} ${3:mandatory})\n\tv-btn(flat)\n\t\tv-icon "},
+	"Hover": {"prefix": "h", "body": "${1|v-hover\n\t,slot-scope='{hover}'|}"},
+	"Icons": {"prefix": "i", "body": "v-icon ${1| ,dashboard,menu,add,home,send,close|}"},
+	"Image": {"prefix": "i", "body": "v-img(src='$1')$0"},
+	"List": {"prefix": "l", "body": "${1|v-list,v-list-tile,v-list-group,v-list-tile-action,v-list-tile-avatar,v-list-tile-content,v-list-tile-title,v-list-tile-sub-title,v-list-tile-action-text|}"},
+	"Menu": {"prefix": "m", "body": "v-menu${1:(open-on-hover)}\n\ttemplate(v-slot:activator='{on}')\n\t\tv-btn(v-on='on') $2\n\tv-list\n\t\tv-list-tile(v-for='$3' @click='$4')\n\t\t\tv-list-tile-title "},
+	"Parallax": {"prefix": "p", "body": "v-parallax(src='$1')"},
+	"Picker: Date Picker": {"prefix": "dp", "body": "v-date-picker(v-model='$1' ${2:landscape} ${3:reactive})"},
+	"Picker: Time Picker": {"prefix": "tp", "body": "v-time-picker(v-model='$1' ${2:landscape} format='24hr')"},
+	"Progress": {"prefix": "p", "body": "v-progress-${1|circular,linear|}(value='$2' ${3:indeterminate})"},
+	"Rating": {"prefix": "r", "body": "v-rating(v-model='$1')"},
+	"Snackbar": {"prefix": "sb", "body": "v-snackbar(v-model='$1') $2\n\tv-btn(flat icon color='secondary' @click='$1=false')\n\t\tv-icon close"},
+	"Subheader": {"prefix": "sh", "body": "v-subheader "},
+	"Tab": {"prefix": "t", "body": "${1|v-tabs,v-tab,v-tabs-items,v-tab-item,v-tabs-slider|}"},
+	"Timeline": {"prefix": "tl", "body": "v-timeline\n\tv-timeline-item\n\t\ttemplate(v-slot:opposite)\n\t\tv-card"},
+	"Toolbar": {"prefix": "tb", "body": "${1|v-toolbar,v-toolbar-side-icon,v-toolbar-title,v-toolbar-items,slot='extension'|}"},
+	"Tooltip": {"prefix": "tt", "body": "v-tooltip(bottom)\n\ttemplate(v-slot:activator='{on}')\n\t\t$1(v-on='on') $2\n\tspan "},
+	"Treeview": {"prefix": "tv", "body": "v-treeview(:items='$1')"},
+	
+	"Link": {"prefix": "l", "body": "nuxt-link(to='$1')$0"},
+	"push": {"prefix": "p", "body": "@click='$$router.push(\"$1\")'$0"},
+	"Slot": {"prefix": "s", "body": "template(v-slot:$1)\n\t"},
+	"v-model": {"prefix": "m", "body": "v-model='$1'"},
+
+	// form
+	// "Form": {"prefix": "f", "body": "form(netlify label='$1')"},
+	"Text Field": {"prefix": "tf", "body": "v-text-field(v-model='$1' label='$2')"},
+	"Input": {"prefix": "i", "body": "input(name='$1' v-model='$2')"},
+
+	// netlify
+	"Netlify Form": {"prefix": "nf", "body": "v-form(netlify name='$1')\n\tdiv(hidden)\n\t\tinput(name='form-name' value='$1')"},
+}
