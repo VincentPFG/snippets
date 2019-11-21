@@ -29,6 +29,8 @@
 
 	"Console Log": {"prefix": "log", "body": "console.log "},
 
+	"Block String": {"prefix": "bs", "body": "'''\n\t$0\n'''"},
+
 	// express
 	"Express Function": {"prefix": "ef", "body": "(r, s) ->\n\t"},
 	"Express Middleware": {"prefix": "em", "body": "(r, s, n) ->\n\t$0\nn()"},
@@ -40,9 +42,7 @@
 	"GraphQL Query Block String": {"prefix": "gql", "body": "gql \"\"\"\n\t$0\n\"\"\""},
 
 	// gridsome local plugin
-	"gridsome.server.js": {"prefix": "gsj", "body": "module.exports = require('./gridsome.server.coffee')"},
-	"gridsome.client.js": {"prefix": "gcj", "body": "module.exports = require('./gridsome.client.coffee')"},
 	"gridsome.server.coffee": {"prefix": "gsc", "body": "module.exports = (api, options) ->\n\n\t"},
-	"gridsome.server.client": {"prefix": "gsc", "body": "export default (Vue, options, {}) ->\n\n\t"},
+	"gridsome.client.coffee": {"prefix": "gcc", "body": "export default (Vue, options, {}) ->\n\n\t"},
 
 }

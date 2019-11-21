@@ -15,4 +15,8 @@
 	// "Coffee Module": {"prefix": "m", "body": "'~/modules/coffeescript'"},
 	"Nuxt CoffeeScript Module": {"prefix": "ncm", "body": "'nuxt-coffeescript-module'"},
 	"Material Colors": {"prefix": "c", "body": "${1|red,pink,purple,deepPurple,indigo,blue,lightBlue,cyan,teal,green,lightGreen,lime,yellow,amber,orange,deepOrange,brown,blueGrey,grey,black,white,transparent|}"},
+
+	// gridsome local plugin
+	"gridsome.server.js": {"prefix": "gsj", "body": "module.exports = require('./gridsome.server.coffee')"},
+	"gridsome.client.js": {"prefix": "gcj", "body": "module.exports = require('./gridsome.client.coffee')"},
 }
